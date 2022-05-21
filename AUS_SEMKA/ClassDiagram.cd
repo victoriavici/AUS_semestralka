@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Kraj">
+    <Position X="1.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kraj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obec">
+    <Position X="4" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>Obec.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Okres">
+    <Position X="6.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Okres.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stat">
+    <Position X="8.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAABAAAAA=</HashCode>
+      <FileName>Stat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UzemnaJednotka">
+    <Position X="5.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIABAAAMAAAAAIAAQEAEQAAAEAAAAAAIAAAEAACAAAQ=</HashCode>
+      <FileName>UzemnaJednotka.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLoader">
+    <Position X="12.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAIAAASBAASAAEAAAAAAAAABAAAAA=</HashCode>
+      <FileName>DataLoader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KNazov">
+    <Position X="14.75" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KNazov.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kriterium&lt;ObjectType, ResultType&gt;">
+    <Position X="12.75" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>kriterium.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KriteriumUJ&lt;ResultType&gt;">
+    <Position X="12.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KriteriumUJ.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUJTyp">
+    <Position X="11.25" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KUJTyp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Filter&lt;ObjectType&gt;">
+    <Position X="5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FNazov">
+    <Position X="2.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FNazov.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilterWithCriterion&lt;ObjectType, ValueType&gt;">
+    <Position X="5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAgEAAACAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>FIlterWithCriterion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FUJTyp">
+    <Position X="5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FUJTyp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FUJPrislusnost">
+    <Position X="7.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FUJPrislusnost.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FUJVzdelaniePocet">
+    <Position X="9.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FUJVzdelaniePocet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FUJVzdelaniePodiel">
+    <Position X="0.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>FUJVzdelaniePodiel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::DataItem&lt;T&gt;" Collapsed="true">
+    <Position X="25.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAABAAAAAAAAAAAAAAAAAAIAAAAAAAAAE=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\data_item.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Structure" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAASEAAAAAIAAAQAAAAAAAAAAAAAgAAAAQAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\structure.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::StructureIterator&lt;T&gt;" Collapsed="true">
+    <Position X="38.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAQAAIAQAAAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\structure_iterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Iterator&lt;T&gt;" Collapsed="true">
+    <Position X="40.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAQAAAAQAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\structure_iterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Iterable&lt;T&gt;" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAQAAAAAQAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\structure_iterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Utils" Collapsed="true">
+    <Position X="40.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Array&lt;T&gt;" Collapsed="true">
+    <Position X="34.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACECAAAAIAAAAhAAAEAAAJAgAAAAIAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\array\array.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::ArrayList&lt;T&gt;" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAgAADEAAAACYgAAABAQAAAAAEAggAAAAECAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\list\array_list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::DoubleLinkedListItem&lt;T&gt;" Collapsed="true">
+    <Position X="27" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAggAAAQAAAAAAIAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\list\double_linked_list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::DoubleLinkedList&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\list\double_linked_list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::LinkedListItem&lt;T&gt;" Collapsed="true">
+    <Position X="27" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAIAAAAAgAAAAAAAAIAACAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\list\linked_list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::LinkedList&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAABDUAAAAiYFABABAQAAAAAEAgAAAAIECAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\list\linked_list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::List&lt;T&gt;" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAABAAAAACAAAAAAAQAEAAAAAgAAAAAECAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\list\list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::BinarySearchTree&lt;K, T&gt;" Collapsed="true">
+    <Position X="15" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAQAAADEQAAEAYAAAABCAAAAAQEgCAQAAAAAAQA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\binary_search_tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::HashTable&lt;K, T&gt;" Collapsed="true">
+    <Position X="17.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAIQgAADEAAAEAYAAAARCAAEAAAMACAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\hash_table.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::LinkedTable&lt;K, T&gt;" Collapsed="true">
+    <Position X="8.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAiEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\linked_table.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::SequenceTable&lt;K, T&gt;" Collapsed="true">
+    <Position X="10.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAQAAIBAAAAEAYABAAACAAAAAAEACAAEAFAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sequence_table.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::SortedSequenceTable&lt;K, T&gt;" Collapsed="true">
+    <Position X="10.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIDEAAAAAAAAAAAAAAAAACQAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorted_sequence_table.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::TableItem&lt;K, T&gt;" Collapsed="true">
+    <Position X="29.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABIAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\table.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Table&lt;K, T&gt;" Collapsed="true">
+    <Position X="12.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAQAAABAAAAEAAAAAAACAAgAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\table.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::TreapItem&lt;K, T&gt;" Collapsed="true">
+    <Position X="29.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAQAAAAAAAAAAABAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\treap.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Treap&lt;K, T&gt;" Collapsed="true">
+    <Position X="15" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAADMAAAEEAAAAABABAAQAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\treap.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::UnsortedSequenceTable&lt;K, T&gt;" Collapsed="true">
+    <Position X="12.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACEAAAAAgAAAAAAAAAAAAAAAQAAAIAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\unsorted_sequence_table.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::BubbleSort&lt;K, T&gt;" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\bubble_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::HeapSort&lt;K, T&gt;" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\heap_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::InsertSort&lt;K, T&gt;" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\insert_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::MergeSort&lt;K, T&gt;" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\merge_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::QuickSort&lt;K, T&gt;" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\quick_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::RadixSort&lt;K, T&gt;" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\radix_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::SelectSort&lt;K, T&gt;" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\select_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::ShellSort&lt;K, T&gt;" Collapsed="true">
+    <Position X="19.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\shell_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Shuffle&lt;K, T&gt;" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\shuffle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::SortNotifier" Collapsed="true">
+    <Position X="36.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAgQgAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Sort&lt;K, T&gt;" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAEAAQAAAAEAAAAAAAAAEIQAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::BinaryTreeNode&lt;T&gt;" Collapsed="true">
+    <Position X="22.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAAAIgABAAAAAAAhAAAQAAAAAAEAAAAAgAgZAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\tree\binary_tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::BinaryTree&lt;T&gt;" Collapsed="true">
+    <Position X="20" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAgAAQAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\tree\binary_tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::KWayTreeNode&lt;T, K&gt;" Collapsed="true">
+    <Position X="22.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAAAAAAAABQAAAEAAAAAABAQEAAAAAEAAAAAQAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\tree\k_way_tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::KWayTree&lt;T, K&gt;" Collapsed="true">
+    <Position X="20" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAiGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\tree\k_way_tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::MultiWayTreeNode&lt;T&gt;" Collapsed="true">
+    <Position X="24.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAQAAAMAAAAAABAQEAAAAAUAAAAAQAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\tree\multi_way_tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::MultiWayTree&lt;T&gt;" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAiEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\tree\multi_way_tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::TreeNode&lt;T&gt;" Collapsed="true">
+    <Position X="23.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAgAAAAAAgAAAAAAEAARgAABAREIAAAAEAAABAQAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\tree\tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Tree&lt;T&gt;" Collapsed="true">
+    <Position X="12.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAACAAAiAEAAAAYAAAAQAAAAAABEAAAAAQAAAQAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\tree\tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Vector" Collapsed="true">
+    <Position X="16.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAACEAAQAAIAIAABAAAEAAAIAgEAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\vector\vector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

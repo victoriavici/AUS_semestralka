@@ -185,7 +185,9 @@
     <ClInclude Include="Kraj.h" />
     <ClInclude Include="kriterium.h" />
     <ClInclude Include="KriteriumUJ.h" />
+    <ClInclude Include="KPrislusnost.h" />
     <ClInclude Include="KUJTyp.h" />
+    <ClInclude Include="KVzdelaniePocet.h" />
     <ClInclude Include="Obec.h" />
     <ClInclude Include="Okres.h" />
     <ClInclude Include="Stat.h" />

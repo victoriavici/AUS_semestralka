@@ -201,6 +201,12 @@
     <ClInclude Include="FUJVzdelaniePodiel.h">
       <Filter>Source Files\Filters</Filter>
     </ClInclude>
+    <ClInclude Include="KVzdelaniePocet.h">
+      <Filter>Source Files\Criterions</Filter>
+    </ClInclude>
+    <ClInclude Include="KPrislusnost.h">
+      <Filter>Source Files\Criterions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">

@@ -15,10 +15,10 @@ public:
 	void nacitajOKres(structures::SortedSequenceTable<std::wstring, Okres*>& zoznam);
 	void nacitajKraj(structures::SortedSequenceTable<std::wstring, Kraj*>& zoznam);
 
-	void nacitajVzdelanieOkresov(structures::SortedSequenceTable<std::wstring, structures::ArrayList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& obce);
+	void nacitajVzdelanieOkresov(structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& obce);
 	void nacitajVzdelanieKrajov(structures::SortedSequenceTable<std::wstring, Okres*>& okresy);
 	void nacitajVzdelanieStatu(structures::SortedSequenceTable<std::wstring, Kraj*>& kraje);
 
-	void priradUJ(structures::SortedSequenceTable<std::wstring, structures::ArrayList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& obce, structures::SortedSequenceTable<std::wstring, Okres*>& okresy,structures::SortedSequenceTable<std::wstring, Kraj*>& kraje, Stat* stat);
+	void priradUJ(structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& obce, structures::SortedSequenceTable<std::wstring, Okres*>& okresy,structures::SortedSequenceTable<std::wstring, Kraj*>& kraje, Stat* stat);
 };
 

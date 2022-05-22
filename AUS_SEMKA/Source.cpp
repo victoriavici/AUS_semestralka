@@ -16,69 +16,146 @@
 #include "../structures/list/linked_list.h"
 #include <string>
 
+#include "KNazov.h"
+#include "KUJTyp.h"
+#include "KVzdelaniePocet.h"
+
+void zakladnyVypisInfo(UzemnaJednotka* hladana) {
+	KNazov knazov;
+	KUJTyp ktyp;
+	KVzdelaniePocet pocet;
+
+	std::wcout << L"Názov: " << knazov.evaluate(*hladana) << std::endl;
+	std::wcout << L"Typ územnej jednotky: " << ktyp.evaluate(*hladana) << std::endl;
+	std::wcout << L"Poèet vzdelaných ¾udí: " << std::endl;
+	std::wcout << L"   Bez ukonèenia: " << pocet.ev(*hladana, 0) << std::endl;
+	std::wcout << L"   Základné: " << pocet.ev(*hladana, 1) << std::endl;
+	std::wcout << L"   Stredné odborné: " << pocet.ev(*hladana, 2) << std::endl;
+	std::wcout << L"   Úplné stredné: " << pocet.ev(*hladana, 3) << std::endl;
+	std::wcout << L"   Vyššie odborné: " << pocet.ev(*hladana, 4) << std::endl;
+	std::wcout << L"   Vysokoškolské: " << pocet.ev(*hladana, 5) << std::endl;
+	std::wcout << L"   Bez školského vzdelania: " << pocet.ev(*hladana, 6) << std::endl;
+	std::wcout << L"   Nezistené: " << pocet.ev(*hladana, 7) << std::endl;
+}
+
+
+void vypisInfo(UzemnaJednotka* hladana) {
+	KNazov knazov;
+	KUJTyp ktyp;
+	KVzdelaniePocet pocet;
+
+	if (ktyp.evaluate(*hladana) == L"Obec") {
+		zakladnyVypisInfo(hladana);
+		std::wcout << L"Vyššia územná jednotka: " << knazov.evaluate(*hladana->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Typ vyššej územnej jednotky: " << ktyp.evaluate(*hladana->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Vyššia územná jednotka: " << knazov.evaluate(*hladana->getNadradenaUJ()->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Typ vyššej územnej jednotky: " << ktyp.evaluate(*hladana->getNadradenaUJ()->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Vyššia územná jednotka: " << knazov.evaluate(*hladana->getNadradenaUJ()->getNadradenaUJ()->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Typ vyššej územnej jednotky: " << ktyp.evaluate(*hladana->getNadradenaUJ()->getNadradenaUJ()->getNadradenaUJ()) << std::endl;
+	}
+	else if (ktyp.evaluate(*hladana) == L"Okres") {
+		zakladnyVypisInfo(hladana);
+		std::wcout << L"Vyššia územná jednotka: " << knazov.evaluate(*hladana->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Typ vyššej územnej jednotky: " << ktyp.evaluate(*hladana->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Vyššia územná jednotka: " << knazov.evaluate(*hladana->getNadradenaUJ()->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Typ vyššej územnej jednotky: " << ktyp.evaluate(*hladana->getNadradenaUJ()->getNadradenaUJ()) << std::endl;
+	}
+	else if (ktyp.evaluate(*hladana) == L"Kraj") {
+		zakladnyVypisInfo(hladana);
+		std::wcout << L"Vyššia územná jednotka: " << knazov.evaluate(*hladana->getNadradenaUJ()) << std::endl;
+		std::wcout << L"Typ vyššej územnej jednotky: " << ktyp.evaluate(*hladana->getNadradenaUJ()) << std::endl;
+	}
+	else {
+		zakladnyVypisInfo(hladana);
+	}
+	hladana = nullptr;
+}
 
 int main() {
+
 	std::setlocale(LC_ALL, "sk_SK.utf8");
 
-	/*std::wstring str;
-	int prevmode = _setmode(_fileno(stdout));
-	std::wcin >> str;
-	_setmode(_fileno(stdin));*/
-
-
-	//int prevmode = _setmode(_fileno(stdout), _O_U16TEXT);
-
-	/*_setmode(_fileno(stdout), _O_U8TEXT);
-	_setmode(_fileno(stdin), _O_WTEXT);*/
-
-	//setlocale(getloc(), new std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>));
 	auto dat = new DataLoader();
 	auto obce = new structures::SortedSequenceTable<std::wstring, Obec*>;
-	auto duplicatyObci = new structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>;
+	auto duplicityObci = new structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>;
 	auto okresy = new structures::SortedSequenceTable<std::wstring, Okres*>;
 	auto kraje = new structures::SortedSequenceTable<std::wstring, Kraj*>;
 	auto stat = new Stat();
 
-	dat->nacitajObce(*duplicatyObci, *obce);
+	dat->nacitajObce(*duplicityObci, *obce);
+
 	dat->nacitajOKres(*okresy);
 	dat->nacitajKraj(*kraje);
 
 
-	//int prevmode = _setmode(_fileno(stdout), _O_U16TEXT);
-
-	std::wcout.imbue(std::locale(std::wcout.getloc(), new std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>));
-
-	//for (auto o : *obce) {
-	//	std::wcout << "ý ž";
-	//	//std::wcout << o->accessData()->getName() << "\n";
-	//}
-	//
-//	_setmode(_fileno(stdout), prevmode);
-
-	/*dat->priradUJ(*duplicatyObci, *obce, *okresy, *kraje, stat);
-	dat->nacitajVzdelanieOkresov(*duplicatyObci, *obce);
+	dat->priradUJ(*duplicityObci, *obce, *okresy, *kraje, stat);
+	dat->nacitajVzdelanieOkresov(*duplicityObci, *obce);
 	dat->nacitajVzdelanieKrajov(*okresy);
-	dat->nacitajVzdelanieStatu(*kraje);*/
-	/*
-		for (auto k : *kraje) {
-			for (int i = 0; i < 8; i++)
+	dat->nacitajVzdelanieStatu(*kraje);
+	stat->setPocetObyvatelov();
+
+
+	std::wstring input;
+	int prevmode = _setmode(_fileno(stdin), _O_U16TEXT);
+	std::wcout << L"Zadaj, èo ideme vyh¾ada: ";
+	std::wcout << std::endl;
+	getline(std::wcin, input);
+	std::wcout << std::endl;
+	_setmode(_fileno(stdin), prevmode);
+
+	Obec* hladane = nullptr;
+	Okres* hladOk = nullptr;
+	Kraj* hladKraj = nullptr;
+	if (obce->tryFind(input, hladane)) {
+		if (hladane != nullptr)
+		{
+			vypisInfo(hladane);
+		}
+		else {
+			std::wcout << L"Obci s rovným názvom existuje viac: " << std::endl;
+			auto pole = duplicityObci->find(input);
+			for (int i = 0; i < pole->size(); i++)
 			{
-				std::wcout << k->accessData()->getName() << ": " << k->accessData()->getVzdelanie(i) << std::endl;
+				std::wcout << i+1 << ". " << pole->at(i)->getName() << " - " << pole->at(i)->getNadradenaUJ()->getName() << std::endl;
 			}
-		}*/
+			std::wcout<<std::endl;
+			int cisloinput;
+			std::wcout << L"Zvol si, ktorú chceš: " << std::endl;
+			std::wcin >> cisloinput;
+			vypisInfo(pole->at(cisloinput-1));
+		}
+	}
+	else if (okresy->tryFind(input, hladOk)) {
+		vypisInfo(hladOk);
+	
+	}
+	else if (kraje->tryFind(input, hladKraj)) {
+		vypisInfo(hladKraj);
+		 
+	}
+	else if (input == stat->getName()) {
+		vypisInfo(stat);
+	}
+	else {
+		std::wcout << L"Zadané slovo nie je žiadnou územnou jednotkou Slovenska." << std::endl;
+	}
+	input.~basic_string();
+	
+
+
 
 	delete dat;
 	for (auto k : *obce) {
 		delete k->accessData();
 	}
 	delete obce;
-	for (auto k : *duplicatyObci) {
+	for (auto k : *duplicityObci) {
 		for (auto kk : *k->accessData()) {
 			delete kk;
 		}
 		delete k->accessData();
 	}
-	delete duplicatyObci;
+	delete duplicityObci;
 	for (auto k : *okresy) {
 		delete k->accessData();
 	}
@@ -86,9 +163,14 @@ int main() {
 	for (auto k : *kraje) {
 		delete k->accessData();
 	}
-	delete kraje;
 	delete stat;
+	delete kraje;
+
+
 
 	_CrtDumpMemoryLeaks();
 	return 895;
 };
+
+
+

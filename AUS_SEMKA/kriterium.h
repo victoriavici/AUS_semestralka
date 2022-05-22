@@ -3,5 +3,5 @@ template<typename ObjectType, typename ResultType>
 class Kriterium {
 
 public:
-	virtual ResultType evaluate(const ObjectType& object);
+	virtual ResultType evaluate(const ObjectType& object) = 0;
 };

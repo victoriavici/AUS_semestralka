@@ -46,6 +46,9 @@
     <Filter Include="Source Files\Filters">
       <UniqueIdentifier>{5dcf7b54-abf0-43f1-8080-5d28db187df4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\DataProcessing">
+      <UniqueIdentifier>{bf0a1e9e-31a7-431c-a284-ed7e6914d83f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UzemnaJednotka.h">
@@ -147,7 +150,7 @@
     <ClInclude Include="KriteriumUJ.h">
       <Filter>Source Files\Criterions</Filter>
     </ClInclude>
-    <ClInclude Include="KUJTyp.h">
+    <ClInclude Include="KTyp.h">
       <Filter>Source Files\Criterions</Filter>
     </ClInclude>
     <ClInclude Include="Filter.h">
@@ -156,16 +159,16 @@
     <ClInclude Include="FIlterWithCriterion.h">
       <Filter>Source Files\Filters</Filter>
     </ClInclude>
-    <ClInclude Include="FUJTyp.h">
+    <ClInclude Include="FTyp.h">
       <Filter>Source Files\Filters</Filter>
     </ClInclude>
-    <ClInclude Include="FUJPrislusnost.h">
+    <ClInclude Include="FPrislusnost.h">
       <Filter>Source Files\Filters</Filter>
     </ClInclude>
-    <ClInclude Include="FUJVzdelaniePocet.h">
+    <ClInclude Include="FVzdelaniePocet.h">
       <Filter>Source Files\Filters</Filter>
     </ClInclude>
-    <ClInclude Include="FUJVzdelaniePodiel.h">
+    <ClInclude Include="FVzdelaniePodiel.h">
       <Filter>Source Files\Filters</Filter>
     </ClInclude>
     <ClInclude Include="KVzdelaniePocet.h">
@@ -182,6 +185,9 @@
     </ClInclude>
     <ClInclude Include="..\structures\table\sorting\sort.h">
       <Filter>Source Files\structures\table\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="DataProcessing.h">
+      <Filter>Source Files\DataProcessing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -203,8 +209,8 @@
     <ClCompile Include="..\structures\structure.cpp">
       <Filter>Source Files\structures</Filter>
     </ClCompile>
-    <ClCompile Include="Obec.cpp">
-      <Filter>Source Files\Units</Filter>
+    <ClCompile Include="DataProcessing.cpp">
+      <Filter>Source Files\DataProcessing</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

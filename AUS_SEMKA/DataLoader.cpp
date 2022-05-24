@@ -10,6 +10,18 @@
 #include "../structures/list/array_list.h"
 
 
+void DataLoader::nacitaj(structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& obce, structures::SortedSequenceTable<std::wstring, Okres*>& okresy, structures::SortedSequenceTable<std::wstring, Kraj*>& kraje, Stat* stat)
+{
+    nacitajObce(duplicaty, obce);
+    nacitajOKres(okresy);
+    nacitajKraj(kraje);
+    priradUJ(duplicaty, obce, okresy, kraje, stat);
+    nacitajVzdelanieOkresov(duplicaty, obce);
+    nacitajVzdelanieKrajov(okresy);
+    nacitajVzdelanieStatu(kraje);
+    stat->setPocetObyvatelov();
+}
+
 void DataLoader::nacitajObce(structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& zoznam)
 {
     std::wifstream input("../data/obce.csv");
@@ -44,7 +56,6 @@ void DataLoader::nacitajObce(structures::SortedSequenceTable<std::wstring, struc
                 poz = riadokvzdelania.find(';');
                 vzdelanie->at(j) = stoi(riadokvzdelania.substr(0, poz));
                 riadokvzdelania = riadokvzdelania.substr(poz + 1);
-                
             }
             vzdelanie->at(7) = stoi(riadokvzdelania);
         }
@@ -117,16 +128,11 @@ void DataLoader::nacitajKraj(structures::SortedSequenceTable<std::wstring, Kraj*
     }
 }
 
-
-
-
-
 void DataLoader::nacitajVzdelanieOkresov(structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& obce)
 {
 
     for (auto o : obce) {
-        if (o->accessData() != nullptr) {
-          //  o->accessData()->setPocetObyvatelov();
+        if (o->accessData() != nullptr){
             for (int i = 0; i < 8; i++)
             {
                 o->accessData()->getNadradenaUJ()->setVzdelanie(i, o->accessData()->getVzdelanie(i));
@@ -136,7 +142,6 @@ void DataLoader::nacitajVzdelanieOkresov(structures::SortedSequenceTable<std::ws
     for (auto d : duplicaty) {
         for (int i = 0; i < d->accessData()->size(); i++)
         {
-           // d->accessData()->at(i)->setPocetObyvatelov();
             for (int j = 0; j < 8; j++)
             {
                 d->accessData()->at(i)->getNadradenaUJ()->setVzdelanie(j, d->accessData()->at(i)->getVzdelanie(j));

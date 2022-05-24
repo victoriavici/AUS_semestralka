@@ -10,10 +10,11 @@ public:
 	DataLoader() {}
 	~DataLoader() {}
 
-
+	void nacitaj(structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& obce, structures::SortedSequenceTable<std::wstring, Okres*>& okresy, structures::SortedSequenceTable<std::wstring, Kraj*>& kraje, Stat* stat);
+private:
 	void nacitajObce(structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& zoznam);
-	void nacitajOKres(structures::SortedSequenceTable<std::wstring, Okres*>& zoznam);
-	void nacitajKraj(structures::SortedSequenceTable<std::wstring, Kraj*>& zoznam);
+	void nacitajOKres(structures::SortedSequenceTable<std::wstring, Okres*>& okresy);
+	void nacitajKraj(structures::SortedSequenceTable<std::wstring, Kraj*>& kraje);
 
 	void nacitajVzdelanieOkresov(structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>& duplicaty, structures::SortedSequenceTable<std::wstring, Obec*>& obce);
 	void nacitajVzdelanieKrajov(structures::SortedSequenceTable<std::wstring, Okres*>& okresy);

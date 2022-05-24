@@ -1,10 +1,10 @@
 #pragma once
 #include "FIlterWithCriterion.h"
 #include "UzemnaJednotka.h"
-class FUJVzdelaniePodiel : public FilterWithCriterion<UzemnaJednotka, double> {
+class FVzdelaniePodiel : public FilterWithCriterion<UzemnaJednotka, double> {
 
 public:
-	FUJVzdelaniePodiel(Kriterium<UzemnaJednotka, double>* kriterium, double hodnota, std::wstring viac) : FilterWithCriterion(kriterium) {
+	FVzdelaniePodiel(Kriterium<UzemnaJednotka, double>* kriterium, double hodnota, std::wstring viac) : FilterWithCriterion(kriterium) {
 		hodnota_ = hodnota; viac_ = viac;
 	};
 protected:

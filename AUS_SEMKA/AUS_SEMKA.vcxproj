@@ -166,18 +166,19 @@
     <ClInclude Include="..\structures\utils.h" />
     <ClInclude Include="..\structures\vector\vector.h" />
     <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="DataProcessing.h" />
     <ClInclude Include="Filter.h" />
     <ClInclude Include="FIlterWithCriterion.h" />
-    <ClInclude Include="FUJTyp.h" />
-    <ClInclude Include="FUJPrislusnost.h" />
-    <ClInclude Include="FUJVzdelaniePocet.h" />
-    <ClInclude Include="FUJVzdelaniePodiel.h" />
+    <ClInclude Include="FTyp.h" />
+    <ClInclude Include="FPrislusnost.h" />
+    <ClInclude Include="FVzdelaniePocet.h" />
+    <ClInclude Include="FVzdelaniePodiel.h" />
     <ClInclude Include="KNazov.h" />
     <ClInclude Include="Kraj.h" />
     <ClInclude Include="kriterium.h" />
     <ClInclude Include="KriteriumUJ.h" />
     <ClInclude Include="KPrislusnost.h" />
-    <ClInclude Include="KUJTyp.h" />
+    <ClInclude Include="KTyp.h" />
     <ClInclude Include="KVzdelaniePocet.h" />
     <ClInclude Include="KVzdelaniePodiel.h" />
     <ClInclude Include="Obec.h" />
@@ -190,7 +191,7 @@
     <ClCompile Include="..\structures\utils.cpp" />
     <ClCompile Include="..\structures\vector\vector.cpp" />
     <ClCompile Include="DataLoader.cpp" />
-    <ClCompile Include="Obec.cpp" />
+    <ClCompile Include="DataProcessing.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="UzemnaJednotka.cpp" />
   </ItemGroup>

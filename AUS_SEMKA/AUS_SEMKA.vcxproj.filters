@@ -84,36 +84,6 @@
     <ClInclude Include="..\structures\tree\tree.h">
       <Filter>Source Files\structures\tree</Filter>
     </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\bubble_sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\heap_sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\insert_sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\merge_sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\quick_sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\radix_sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\select_sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\shell_sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\shuffle.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="..\structures\table\sorting\sort.h">
-      <Filter>Source Files\structures\table\sorting</Filter>
-    </ClInclude>
     <ClInclude Include="..\structures\table\binary_search_tree.h">
       <Filter>Source Files\structures\table</Filter>
     </ClInclude>
@@ -183,9 +153,6 @@
     <ClInclude Include="Filter.h">
       <Filter>Source Files\Filters</Filter>
     </ClInclude>
-    <ClInclude Include="FNazov.h">
-      <Filter>Source Files\Filters</Filter>
-    </ClInclude>
     <ClInclude Include="FIlterWithCriterion.h">
       <Filter>Source Files\Filters</Filter>
     </ClInclude>
@@ -207,6 +174,15 @@
     <ClInclude Include="KPrislusnost.h">
       <Filter>Source Files\Criterions</Filter>
     </ClInclude>
+    <ClInclude Include="KVzdelaniePodiel.h">
+      <Filter>Source Files\Criterions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\structures\table\sorting\quick_sort.h">
+      <Filter>Source Files\structures\table\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\structures\table\sorting\sort.h">
+      <Filter>Source Files\structures\table\sorting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -220,9 +196,6 @@
     </ClCompile>
     <ClCompile Include="..\structures\vector\vector.cpp">
       <Filter>Source Files\structures\vector</Filter>
-    </ClCompile>
-    <ClCompile Include="..\structures\table\sorting\sort.cpp">
-      <Filter>Source Files\structures\table\sorting</Filter>
     </ClCompile>
     <ClCompile Include="..\structures\utils.cpp">
       <Filter>Source Files\structures</Filter>

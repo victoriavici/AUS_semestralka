@@ -153,15 +153,7 @@
     <ClInclude Include="..\structures\table\linked_table.h" />
     <ClInclude Include="..\structures\table\sequence_table.h" />
     <ClInclude Include="..\structures\table\sorted_sequence_table.h" />
-    <ClInclude Include="..\structures\table\sorting\bubble_sort.h" />
-    <ClInclude Include="..\structures\table\sorting\heap_sort.h" />
-    <ClInclude Include="..\structures\table\sorting\insert_sort.h" />
-    <ClInclude Include="..\structures\table\sorting\merge_sort.h" />
     <ClInclude Include="..\structures\table\sorting\quick_sort.h" />
-    <ClInclude Include="..\structures\table\sorting\radix_sort.h" />
-    <ClInclude Include="..\structures\table\sorting\select_sort.h" />
-    <ClInclude Include="..\structures\table\sorting\shell_sort.h" />
-    <ClInclude Include="..\structures\table\sorting\shuffle.h" />
     <ClInclude Include="..\structures\table\sorting\sort.h" />
     <ClInclude Include="..\structures\table\table.h" />
     <ClInclude Include="..\structures\table\treap.h" />
@@ -176,7 +168,6 @@
     <ClInclude Include="DataLoader.h" />
     <ClInclude Include="Filter.h" />
     <ClInclude Include="FIlterWithCriterion.h" />
-    <ClInclude Include="FNazov.h" />
     <ClInclude Include="FUJTyp.h" />
     <ClInclude Include="FUJPrislusnost.h" />
     <ClInclude Include="FUJVzdelaniePocet.h" />
@@ -188,6 +179,7 @@
     <ClInclude Include="KPrislusnost.h" />
     <ClInclude Include="KUJTyp.h" />
     <ClInclude Include="KVzdelaniePocet.h" />
+    <ClInclude Include="KVzdelaniePodiel.h" />
     <ClInclude Include="Obec.h" />
     <ClInclude Include="Okres.h" />
     <ClInclude Include="Stat.h" />
@@ -195,7 +187,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\structures\structure.cpp" />
-    <ClCompile Include="..\structures\table\sorting\sort.cpp" />
     <ClCompile Include="..\structures\utils.cpp" />
     <ClCompile Include="..\structures\vector\vector.cpp" />
     <ClCompile Include="DataLoader.cpp" />

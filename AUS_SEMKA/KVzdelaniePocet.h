@@ -2,9 +2,9 @@
 #include "KriteriumUJ.h"
 class KVzdelaniePocet : public KriteriumUJ<int>
 {
+private:
+	int i_;
 public:
-	int evaluate(const UzemnaJednotka& object) override { return object.getPocetVzdelani(); };
-	int ev(const UzemnaJednotka& object, int i) {
-		return object.getVzdelanie(i);
-	};
+	KVzdelaniePocet(int i) : KriteriumUJ(), i_(i) {};
+	int evaluate(const UzemnaJednotka& object) override { return object.getVzdelanie(i_); };
 };

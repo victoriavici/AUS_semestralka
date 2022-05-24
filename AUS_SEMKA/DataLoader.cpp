@@ -174,8 +174,10 @@ void DataLoader::priradUJ(structures::SortedSequenceTable<std::wstring, structur
         for (auto d : duplicaty) {
             for (int j = 0; j < d->accessData()->size(); j++) {
                 for (auto oo : okresy) {
-                    if (d->accessData()->at(j)->getCode().substr(0, 6) == oo->accessData()->getCode())
+                    if (d->accessData()->at(j)->getCode().substr(0, 6) == oo->accessData()->getCode()) {
                         d->accessData()->at(j)->setNadradenaUJ(oo->accessData());
+                        oo->accessData()->setPodradena(d->accessData()->at(j));
+                    }
                 }
             }
         }
@@ -186,6 +188,7 @@ void DataLoader::priradUJ(structures::SortedSequenceTable<std::wstring, structur
                     if (ob->accessData()->getCode().substr(0, 6) == oo->accessData()->getCode())
                     {
                         ob->accessData()->setNadradenaUJ(oo->accessData());
+                        ob->accessData()->getNadradenaUJ()->setPodradena(ob->accessData());
                     }
                 }
             }
@@ -195,11 +198,13 @@ void DataLoader::priradUJ(structures::SortedSequenceTable<std::wstring, structur
                 if (o->accessData()->getCode().substr(0, 5) == k->accessData()->getCode())
                 {
                     o->accessData()->setNadradenaUJ(k->accessData());
+                    o->accessData()->getNadradenaUJ()->setPodradena(o->accessData());
                 }
             }
         }
         for (auto k : kraje) {
             k->accessData()->setNadradenaUJ(stat);
+            k->accessData()->getNadradenaUJ()->setPodradena(k->accessData());
         }
 }
 

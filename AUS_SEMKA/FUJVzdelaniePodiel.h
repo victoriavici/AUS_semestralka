@@ -1,12 +1,19 @@
 #pragma once
 #include "FIlterWithCriterion.h"
 #include "UzemnaJednotka.h"
-class FUJVzdelaniePodiel : public FilterWithCriterion<UzemnaJednotka, std::wstring> {
+class FUJVzdelaniePodiel : public FilterWithCriterion<UzemnaJednotka, double> {
 
-private:
-	FUJVzdelaniePodiel(Kriterium<UzemnaJednotka, int>* kriterium, double valueMin, double valueMax, int vzdelanieTyp);
+public:
+	FUJVzdelaniePodiel(Kriterium<UzemnaJednotka, double>* kriterium, double hodnota, std::wstring viac) : FilterWithCriterion(kriterium) {
+		hodnota_ = hodnota; viac_ = viac;
+	};
 protected:
-	//bool passFilter(double hodnota) override;
+	bool passFilter(double hodnota)  override {
+		if (viac_ == L"v")
+			return hodnota_ <= hodnota;
+		return  hodnota_ >= hodnota;
+	};
 private:
-	int vzdelanieTyp_;
+	double hodnota_;
+	std::wstring viac_;
 };

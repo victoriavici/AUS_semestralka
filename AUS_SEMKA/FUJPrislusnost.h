@@ -1,9 +1,16 @@
 #pragma once
 #include "FIlterWithCriterion.h"
 #include "UzemnaJednotka.h"
-class FUJPrislusnost: public FilterWithCriterion<UzemnaJednotka, std::wstring> {
+#include "KUJTyp.h"
+class FUJPrislusnost: public FilterWithCriterion<UzemnaJednotka, bool> {
 
+public:
+	FUJPrislusnost(Kriterium<UzemnaJednotka, bool>* kriterium, std::wstring hodnota) : FilterWithCriterion(kriterium), hodnota_(hodnota) {};
+protected:
+	bool passFilter(bool hodnota) override
+	{
+		return hodnota;
+	};
 private:
-	FUJPrislusnost(Kriterium<UzemnaJednotka, std::wstring>* kriterium, std::wstring hodnota);
-
+	std::wstring hodnota_;
 };

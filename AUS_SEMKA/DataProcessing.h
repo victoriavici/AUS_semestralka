@@ -1,15 +1,13 @@
 #pragma once
-#include "../structures/list/array_list.h"
-#include "../structures/list/linked_list.h"
-#include "Obec.h"
-#include "Kraj.h"
-#include "Okres.h"
 #include <iostream>
 #include <locale>
 #include <codecvt>
 #include <io.h>
 #include <fcntl.h>
-#include "../structures/table/sorted_sequence_table.h"
+
+#include "Obec.h"
+#include "Kraj.h"
+#include "Okres.h"
 
 #include "KNazov.h"
 #include "KTyp.h"
@@ -21,6 +19,9 @@
 #include "KVzdelaniePodiel.h"
 #include "FVzdelaniePodiel.h"
 
+#include "../structures/table/sorted_sequence_table.h"
+#include "../structures/list/array_list.h"
+#include "../structures/list/linked_list.h"
 #include "../structures/table/sorting/sort.h"
 #include "../structures/table/sorting/quick_sort.h"
 class DataProcessing

@@ -14,9 +14,7 @@ namespace structures
 	Vector::Vector(Vector& other) :
 		Vector(other.size_)
 	{
-		
 		memcpy(memory_, other.memory_, other.size_);
-
 	}
 
 	Vector::~Vector()

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KNazov">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KNazov.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KPrislusnost">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>KPrislusnost.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kriterium&lt;ObjectType, ResultType&gt;">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>kriterium.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KriteriumUJ&lt;ResultType&gt;">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KriteriumUJ.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KTyp">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KTyp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KVzdelaniePodiel">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAIACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KVzdelaniePodiel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KVzdelaniePocet">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAIAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>KVzdelaniePocet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLoader">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAIAAASBAASAAEAAAAAAAAARAAAAA=</HashCode>
+      <FileName>DataLoader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataProcessing">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIgEIAAAAAQAAAAAgCAAAggAAAAAIAAAEAAAAIAAAA=</HashCode>
+      <FileName>DataProcessing.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Filter&lt;ObjectType&gt;">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilterWithCriterion&lt;ObjectType, ValueType&gt;">
+    <Position X="4" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAgEAAACAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>FIlterWithCriterion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FPrislusnost">
+    <Position X="3" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>FPrislusnost.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FTyp">
+    <Position X="7.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>FTyp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FVzdelaniePocet">
+    <Position X="0.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAgAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>FVzdelaniePocet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FVzdelaniePodiel">
+    <Position X="5.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAgAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FVzdelaniePodiel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::QuickSort&lt;K&gt;">
+    <Position X="10.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAEAAAAAAAAAAAAAAAAEg=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\quick_sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="structures::Sort&lt;K&gt;">
+    <Position X="10.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>C:\Users\vikig\OneDrive\Dokumenty\4. SEMESTER\AUS\AUS_SEMKA\structures\table\sorting\sort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kraj">
+    <Position X="10.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kraj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obec">
+    <Position X="15.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>Obec.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Okres">
+    <Position X="17.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Okres.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stat">
+    <Position X="13" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAABAAAAA=</HashCode>
+      <FileName>Stat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UzemnaJednotka">
+    <Position X="14" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BYABAAQMAAAAAIAAQEAEQAQAEAAAAIAIAAAGAASAAAQ=</HashCode>
+      <FileName>UzemnaJednotka.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,7 +1,4 @@
 #include "DataLoader.h"
-#include "Obec.h"
-#include "Kraj.h"
-#include "Okres.h"
 #include"DataProcessing.h"
 
 int main() {

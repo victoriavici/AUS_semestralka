@@ -20,44 +20,79 @@ void DataProcessing::vykonajOperacie(structures::SortedSequenceTable<std::wstrin
 			bool vek = false;
 			auto vyfiltrovane = new structures::ArrayList<UzemnaJednotka*>;
 			std::wcout << L"Filtrova pod¾a: " << std::endl;
-			std::wcout << L"Typ územnej jednotky (0/1): " << std::endl;
 			std::wstring o;
-			getline(std::wcin, o);
-			if (o == L"1") {
+			do {
+				std::wcout << L"Typ územnej jednotky (0/1): " << std::endl;
+				getline(std::wcin, o);
+			} while (o != L"1" && o != L"0" && o != L"ano" && o != L"nie" );
+			if (o == L"1" || o == L"ano") {
 				filtrovanieUzemnaJednotka(obce, duplicityObci, okresy, kraje, stat, *vyfiltrovane);
 				uzfiltrovane = true;
 			}
-			std::wcout << L"Poèet ¾udí vo vzdelanostnej skupine (0/1)" << std::endl;
-			getline(std::wcin, o);
-			if (o == L"1") {
+			do {
+				std::wcout << L"Poèet ¾udí vo vzdelanostnej skupine (0/1)" << std::endl;
+				getline(std::wcin, o);
+			} while (o != L"1" && o != L"0" && o != L"ano" && o != L"nie" );
+			if (o == L"1" || o == L"ano" ) {
 				vek = true;
 				filtrovanieVzdelaniePocet(obce, duplicityObci, okresy, kraje, stat, *vyfiltrovane, uzfiltrovane);
 				uzfiltrovane = true;
 			}
-			std::wcout << L"Príslušnos k územnej jednotke (0/1)" << std::endl;
-			getline(std::wcin, o);
-			if (o == L"1") {
+			do {
+				std::wcout << L"Príslušnos k územnej jednotke (0/1)" << std::endl;
+				getline(std::wcin, o);
+			} while (o != L"1" && o != L"0" && o != L"ano" && o != L"nie" );
+			if (o == L"1" || o == L"ano" ) {
 				filtrovaniePrislusnost(obce, duplicityObci, okresy, kraje, stat, *vyfiltrovane, uzfiltrovane);
 				uzfiltrovane = true;
 			}
-			std::wcout << L"Podiel ¾udí vo vzdelanostnej skupine (0/1)" << std::endl;
-			getline(std::wcin, o);
+			do {
+				std::wcout << L"Podiel ¾udí vo vzdelanostnej skupine (0/1)" << std::endl;
+				getline(std::wcin, o);
+			} while (o != L"1" && o != L"0" && o != L"ano" && o != L"nie" );
 			bool podiel = false;
-			if (o == L"1") {
+			if (o == L"1" || o == L"ano") {
 				podiel = true;
 				filtrovanieVzdelaniePodiel(obce, duplicityObci, okresy, kraje, stat, *vyfiltrovane, uzfiltrovane);
 				uzfiltrovane = true;
 			}
+			if (!uzfiltrovane) {
+				std::wcout << L"Nevybral si žiaden filter. :)" << std::endl;
+				do {
+					std::wcout << L"Chceš vypísa všetky? (0/1)" << std::endl;
+					getline(std::wcin, o);
+				} while (o != L"1" && o != L"0" && o != L"ano" && o != L"nie" );
+				if (o == L"1" || o == L"ano" ) {
+					vyfiltrovane->add(stat);
+					for (auto k : *kraje) {
+						vyfiltrovane->add(k->accessData());
+					}
+					for (auto k : *okresy) {
+						vyfiltrovane->add(k->accessData());
+					}
+					for (auto k : *obce) {
+						if (k->accessData() != nullptr)
+						vyfiltrovane->add(k->accessData());
+					}
+					for (auto k : *duplicityObci) {
+						for (size_t i = 0; i < k->accessData()->size(); i++)
+						{
+							vyfiltrovane->add(k->accessData()->at(i));
+						}
+					}
+				}
+			}
 			if (vyfiltrovane->size() != 0) {
-
-				std::wcout << L"Chceš utriedi výsledky? (0/1)" << std::endl;
 				std::wstring tried;
-				getline(std::wcin, tried);
-				if (tried == L"1") {
+				do {
+					std::wcout << L"Chceš utriedi výsledky? (0/1)" << std::endl;
+					getline(std::wcin, tried);
+				} while (tried != L"1" && tried != L"0" && tried != L"ano" && tried != L"nie");
+				if (tried == L"1" || tried == L"ano") {
 					triedenie(vyfiltrovane);
 				}
 
-				for (int i = 0; i < vyfiltrovane->size(); i++)
+				for (size_t i = 0; i < vyfiltrovane->size(); i++)
 				{
 					vypisInfo(vyfiltrovane->at(i), vek);
 					if (podiel) {
@@ -66,17 +101,19 @@ void DataProcessing::vykonajOperacie(structures::SortedSequenceTable<std::wstrin
 					std::wcout << std::endl;
 				}
 			}
-			else {
+			else if(uzfiltrovane) {
 				std::wcout << std::endl;
-				std::wcout << "Zadaným filtorm nevyhovuje žiadna územna jednotka :(" << std::endl;
+				std::wcout << L"Zadaným filtorm nevyhovuje žiadna územna jednotka :(" << std::endl;
 				std::wcout << std::endl;
 			}
 			delete vyfiltrovane;
 		}
-		std::wcout << L"Chceš ešte nieèo? (0/1)" << std::endl;
-		getline(std::wcin, operacia);
-		std::wcout << std::endl;
-	} while (operacia == L"1");
+		do {
+			std::wcout << L"Chceš ešte nieèo? (0/1)" << std::endl;
+			getline(std::wcin, operacia);
+			std::wcout << std::endl;
+		} while (operacia != L"1" && operacia != L"0" && operacia != L"ano" && operacia != L"nie");
+	} while (operacia == L"1" || operacia == L"ano" );
 
 }
 
@@ -178,7 +215,7 @@ void DataProcessing::bodoveVyhladavanie(structures::SortedSequenceTable<std::wst
 		getline(std::wcin, input);
 	} while (input.empty());
 	std::wcout << std::endl;
-	_setmode(_fileno(stdin), prevmode);
+	auto blablabla =_setmode(_fileno(stdin), prevmode);
 
 	Obec* hladane = nullptr;
 	Okres* hladOk = nullptr;
@@ -191,16 +228,16 @@ void DataProcessing::bodoveVyhladavanie(structures::SortedSequenceTable<std::wst
 		else {
 			std::wcout << L"Obci s rovným názvom existuje viac: " << std::endl;
 			auto pole = duplicityObci->find(input);
-			for (int i = 0; i < pole->size(); i++)
+			for (size_t i = 0; i < pole->size(); i++)
 			{
 				std::wcout << i + 1 << ". " << pole->at(i)->getName() << " - " << pole->at(i)->getNadradenaUJ()->getName() << std::endl;
 			}
 			std::wcout << std::endl;
-			int cisloinput;
+			size_t cisloinput;
 			do {
 				std::wcout << L"Zvol si, ktorú chceš: " << std::endl;
 				std::wcin >> cisloinput;
-			} while (cisloinput < 1 || cisloinput >= pole->size());
+			} while (cisloinput < 1 || cisloinput > pole->size());
 			vypisInfo(pole->at(cisloinput - 1), true);
 		}
 	}
@@ -235,7 +272,7 @@ void DataProcessing::filtrovanieUzemnaJednotka(structures::SortedSequenceTable<s
 			vyfiltrovane.add(o->accessData());
 		}
 		for (auto d : *duplicityObci) {
-			for (int i = 0; i < d->accessData()->size(); i++)
+			for (size_t i = 0; i < d->accessData()->size(); i++)
 			{
 				vyfiltrovane.add(d->accessData()->at(i));
 			}
@@ -271,7 +308,7 @@ void DataProcessing::filtrovanieVzdelaniePocet(structures::SortedSequenceTable<s
 	do {
 		std::wcout << L"Chceš viac èi menej (v/m): " << std::endl;
 		getline(std::wcin, viac);
-	} while (viac != L"v" || viac != L"m");
+	} while (viac != L"v" && viac != L"m");
 
 	KVzdelaniePocet* kvzdel = new KVzdelaniePocet(stoi(typ) - 1);
 	auto vzdel = new FVzdelaniePocet(kvzdel, stoi(pocet), viac);
@@ -320,7 +357,7 @@ void DataProcessing::filtrovanieVzdelaniePocet(structures::SortedSequenceTable<s
 				}
 			}
 			for (auto k : *duplicityObci) {
-				for (int i = 0; i < k->accessData()->size(); i++)
+				for (size_t i = 0; i < k->accessData()->size(); i++)
 				{
 					if (vzdel->pass(*k->accessData()->at(i))) {
 						vyfiltrovane.add(k->accessData()->at(i));
@@ -353,7 +390,7 @@ void DataProcessing::filtrovaniePrislusnost(structures::SortedSequenceTable<std:
 
 		getline(std::wcin, input);
 		std::wcout << std::endl;
-		_setmode(_fileno(stdin), prevmode);
+		auto blablabla = _setmode(_fileno(stdin), prevmode);
 	} while (input.empty());
 
 	auto kp = new KPrislusnost(input);
@@ -380,7 +417,7 @@ void DataProcessing::filtrovaniePrislusnost(structures::SortedSequenceTable<std:
 			}
 		}
 		for (auto k : *duplicityObci) {
-			for (int i = 0; i < k->accessData()->size(); i++)
+			for (size_t i = 0; i < k->accessData()->size(); i++)
 			{
 				if (prislusnot->pass(*k->accessData()->at(i))) {
 					vyfiltrovane.add(k->accessData()->at(i));
@@ -469,7 +506,7 @@ void DataProcessing::filtrovanieVzdelaniePodiel(structures::SortedSequenceTable<
 				}
 			}
 			for (auto k : *duplicityObci) {
-				for (int i = 0; i < k->accessData()->size(); i++)
+				for (size_t i = 0; i < k->accessData()->size(); i++)
 				{
 					if (vzdel->pass(*k->accessData()->at(i))) {
 						vyfiltrovane.add(k->accessData()->at(i));
@@ -507,15 +544,16 @@ void DataProcessing::triedenie(structures::ArrayList<UzemnaJednotka*>* vyfiltrov
 		std::wcout << L"Pod¾a nazvu (1)" << std::endl;
 		std::wcout << L"Pod¾a poètu obyvate¾ov vzdelanostnej skupiny (2)" << std::endl;
 		std::wcout << L"Pod¾a podielu obyvate¾ov vzdelanostnej skupiny (3)" << std::endl;
+		std::wcout << L"Pod¾a územnej jednotky (4)" << std::endl;
 		getline(std::wcin, tried);
-	} while (tried != L"1" && tried != L"2" && tried != L"3");
+	} while (tried != L"1" && tried != L"2" && tried != L"3" && tried !=L"4");
 	if (tried == L"1") {
 		KNazov* kn = new KNazov;
 
 		auto kvik = structures::QuickSort<std::wstring>(kn);
 		kvik.sort(vyfiltrovane, smer);
 
-	}
+	} else 
 	if (tried == L"2") {
 		do {
 			std::wcout << L"vyber si vzdelanostnú skupinu (1-8): " << std::endl;
@@ -525,7 +563,7 @@ void DataProcessing::triedenie(structures::ArrayList<UzemnaJednotka*>* vyfiltrov
 		auto kvik = structures::QuickSort<int>(kv);
 		kvik.sort(vyfiltrovane, smer);
 
-	}
+	} else
 	if (tried == L"3") {
 		do {
 			std::wcout << L"vyber si vzdelanostnú skupinu (1-8): " << std::endl;
@@ -533,6 +571,11 @@ void DataProcessing::triedenie(structures::ArrayList<UzemnaJednotka*>* vyfiltrov
 		} while (tried != L"1" && tried != L"2" && tried != L"3" && tried != L"4" && tried != L"5" && tried != L"6" && tried != L"7" && tried != L"8");
 		KVzdelaniePodiel* kv = new KVzdelaniePodiel(stoi(tried));
 		auto kvik = structures::QuickSort<double>(kv);
+		kvik.sort(vyfiltrovane, smer);
+	}
+	else if (tried == L"4") {
+		KTyp* ktyp = new KTyp();
+		auto kvik = structures::QuickSort<std::wstring>(ktyp);
 		kvik.sort(vyfiltrovane, smer);
 	}
 }

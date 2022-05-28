@@ -74,7 +74,6 @@ void DataLoader::nacitajObce(structures::SortedSequenceTable<std::wstring, struc
             Obec* o = new Obec(nazov, code, new structures::Array<int>(*vzdelanie));
             o->setPocetObyvatelov();
             duplicaty.find(nazov)->add(o);
-
         }
         delete vzdelanie;
     }

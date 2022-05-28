@@ -31,7 +31,7 @@ namespace structures
 	template<typename K>
 	inline void QuickSort<K>::quick(ArrayList<UzemnaJednotka*>* table, int min, int max, bool smer)
 	{
-		K pivot = kriterium_->evaluate(*table->at((min + max) / 2));
+		auto pivot = kriterium_->evaluate(*table->at((min + max) / 2));
 		auto lavy = min;
 		auto pravy = max;
 		do {

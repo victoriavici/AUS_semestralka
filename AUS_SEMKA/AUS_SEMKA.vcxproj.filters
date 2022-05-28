@@ -214,6 +214,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagramFinal.cd">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

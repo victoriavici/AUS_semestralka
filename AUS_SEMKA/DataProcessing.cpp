@@ -147,7 +147,7 @@ void DataProcessing::vzdelanieVypisInfo(UzemnaJednotka* hladana) {
 }
 
 void DataProcessing::podielVypisInfo(UzemnaJednotka* hladana) {
-	std::wcout << L"Poèet vzdelaných ¾udí: " << std::endl;
+	std::wcout << L"Podiel vzdelaných ¾udí: " << std::endl;
 	KVzdelaniePodiel pocet0(0);
 	std::wcout << L"   Bez ukonèenia: " << pocet0.evaluate(*hladana) << "%" << std::endl;
 	KVzdelaniePodiel pocet1(1);
@@ -297,6 +297,7 @@ void DataProcessing::filtrovanieVzdelaniePocet(structures::SortedSequenceTable<s
 	std::wstring typ;
 	do {
 		std::wcout << L"Zadaj typ vzdelania (1-8): " << std::endl;
+		vypisTypy();
 		getline(std::wcin, typ);
 	} while (typ != L"1" && typ != L"2" && typ != L"3" && typ != L"4" && typ != L"5" && typ != L"6" && typ != L"7" && typ != L"8");
 	std::wstring pocet;
@@ -444,6 +445,7 @@ void DataProcessing::filtrovanieVzdelaniePodiel(structures::SortedSequenceTable<
 	std::wstring typ;
 	do {
 		std::wcout << L"Zadaj typ vzdelania (1-8): " << std::endl;
+		vypisTypy();
 		getline(std::wcin, typ);
 	} while (typ != L"1" && typ != L"2" && typ != L"3" && typ != L"4" && typ != L"5" && typ != L"6" && typ != L"7" && typ != L"8");
 	std::wstring pocet;
@@ -556,7 +558,8 @@ void DataProcessing::triedenie(structures::ArrayList<UzemnaJednotka*>* vyfiltrov
 	} else 
 	if (tried == L"2") {
 		do {
-			std::wcout << L"vyber si vzdelanostnú skupinu (1-8): " << std::endl;
+			std::wcout << L"Vyber si vzdelanostnú skupinu (1-8): " << std::endl;
+			vypisTypy();
 			getline(std::wcin, tried);
 		} while (tried != L"1" && tried != L"2" && tried != L"3" && tried != L"4" && tried != L"5" && tried != L"6" && tried != L"7" && tried != L"8");
 		KVzdelaniePocet* kv = new KVzdelaniePocet(stoi(tried));
@@ -566,7 +569,8 @@ void DataProcessing::triedenie(structures::ArrayList<UzemnaJednotka*>* vyfiltrov
 	} else
 	if (tried == L"3") {
 		do {
-			std::wcout << L"vyber si vzdelanostnú skupinu (1-8): " << std::endl;
+			std::wcout << L"Vyber si vzdelanostnú skupinu (1-8): " << std::endl;
+			vypisTypy();
 			getline(std::wcin, tried);
 		} while (tried != L"1" && tried != L"2" && tried != L"3" && tried != L"4" && tried != L"5" && tried != L"6" && tried != L"7" && tried != L"8");
 		KVzdelaniePodiel* kv = new KVzdelaniePodiel(stoi(tried));
@@ -578,4 +582,16 @@ void DataProcessing::triedenie(structures::ArrayList<UzemnaJednotka*>* vyfiltrov
 		auto kvik = structures::QuickSort<std::wstring>(ktyp);
 		kvik.sort(vyfiltrovane, smer);
 	}
+}
+
+void DataProcessing::vypisTypy()
+{
+	std::wcout << L" 1.  Bez ukonèenia" <<std::endl;
+	std::wcout << L" 2.  Základné " <<std::endl;
+	std::wcout << L" 3.  Stredné odborné " << std::endl;
+	std::wcout << L" 4.  Úplné stredné "  << std::endl;
+	std::wcout << L" 5.  Vyššie odborné " << std::endl;
+	std::wcout << L" 6.  Vysokoškolské " <<  std::endl;
+	std::wcout << L" 7.  Bez školského vzdelania "  << std::endl;
+	std::wcout << L" 8.  Nezistené " << std::endl;
 }

@@ -41,5 +41,6 @@ private:
 	void filtrovaniePrislusnost(structures::SortedSequenceTable<std::wstring, Obec*>* obce, structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>* duplicityObci, structures::SortedSequenceTable<std::wstring, Okres*>* okresy, structures::SortedSequenceTable<std::wstring, Kraj*>* kraje, Stat* stat, structures::ArrayList<UzemnaJednotka*>& vyfiltrovane, bool uzfiltrovane);
 	void filtrovanieVzdelaniePodiel(structures::SortedSequenceTable<std::wstring, Obec*>* obce, structures::SortedSequenceTable<std::wstring, structures::LinkedList<Obec*>*>* duplicityObci, structures::SortedSequenceTable<std::wstring, Okres*>* okresy, structures::SortedSequenceTable<std::wstring, Kraj*>* kraje, Stat* stat, structures::ArrayList<UzemnaJednotka*>& vyfiltrovane, bool uzfiltrovane);
 	void triedenie(structures::ArrayList<UzemnaJednotka*>* vyfiltrovane);
+	void vypisTypy();
 };
 
